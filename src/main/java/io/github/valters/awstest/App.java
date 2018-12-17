@@ -42,10 +42,6 @@ public class App {
         }
     }
 
-    /**
-     * Given AWS information, connects to the cloud and retrieves a content of a
-     * file stored in the S3 bucket.
-     */
     public String retrieve(final String bucketName, final String filePath) {
 
         out.println(format("region = %s, bucketName = %s, fileName = %s", DEFAULT_REGION, bucketName, filePath));
