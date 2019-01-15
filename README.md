@@ -1,5 +1,6 @@
 # s3-decrypt-test
 AWS SDK v2 S3 retrieve test with decryption.
+The bug was fixed in v2.3.2, with PR https://github.com/aws/aws-sdk-java-v2/pull/991
 
 To run, you will need to go into AWS KMS and note down an encryption key.
 Then edit upload.sh script, to specify a bucket, and your key id.
@@ -12,3 +13,4 @@ You can run from IDE or execute `mvn clean package exec:java` to run.
 Observe the program fails with "Caused by: java.io.UncheckedIOException: Cannot encode string." error.
 In pom.xml, you can change version to 2.1.3. Run again, it does not fail.
 There was some kind of regression introduced in 2.1.3 -> 2.1.4.
+The regression was fixed in v 2.3.2
